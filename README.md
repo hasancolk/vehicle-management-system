@@ -32,7 +32,7 @@ Similarly, an admin associated with a vehicle can grant standard users either ad
 git clone https://github.com/hasancolk/vehicle-management-system.git
 ```
 #### 2. Configure the database settings
-src/main/resources/application.properties dosyasında aşağıdaki ayarlamaları kendi veritabanınıza göre yapılandırın.
+Configure the following settings in the src/main/resources/application.properties file according to your own database.
 ```shell
 spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
 spring.datasource.username=your_username
@@ -48,19 +48,20 @@ mvn spring-boot:run
 ```
 
 ## How to Use
-After starting the project, go to http://localhost:8080/swagger-ui/index.html
+After starting the project, go to http://localhost:8080/swagger-ui/index.html <br><br>
 
 To register a user, send a request to the user/createUser endpoint.<br><br>
-![image](https://github.com/hasancolk/vehicle-yedek/assets/70701060/bd44eba4-73f4-476a-890e-a3a9a4a26596)
+![image](https://github.com/hasancolk/vehicle-management-system/assets/70701060/ae33e2a0-f1ca-438c-8548-cd3614e21455) <br><br>
 
 Log in by sending a request to the auth/login endpoint. <br><br>
-![image](https://github.com/hasancolk/vehicle-yedek/assets/70701060/789cd07d-3639-4a1f-a7bf-1766b223fc57)
+![image](https://github.com/hasancolk/vehicle-management-system/assets/70701060/18078b10-0bfd-4ff8-930b-de73430817ad) <br><br>
 
 Copy the JWT generated as a result of the request. <br><br>
-![image](https://github.com/hasancolk/vehicle-yedek/assets/70701060/16de40cd-7a70-4b66-9a6c-f7e18fbc9b1d)
+![image](https://github.com/hasancolk/vehicle-management-system/assets/70701060/f72b883e-dce2-418d-a7e1-447fc3f2cefc) <br><br>
 
-After clicking 'Authorize,' paste the JWT and click the authorize button. You have now enabled the use of this token for requests to different endpoints. <br><br>
-![image](https://github.com/hasancolk/vehicle-yedek/assets/70701060/cdff478b-860c-4e5e-9ea4-fb64e8d2cd78)
+After clicking 'Authorize,' paste the JWT and click the authorize button. You have now enabled the use of this token for requests to different endpoints.
+Remember that the token is valid for 1 hour. You must obtain a new token after it expires. <br><br>
+![image](https://github.com/hasancolk/vehicle-management-system/assets/70701060/69903eb3-f4be-4f3c-9fad-53ff6a5d5fe4) <br><br>
 
 You can start making requests to the endpoints after activating the token. <br><br>
-![image](https://github.com/hasancolk/vehicle-yedek/assets/70701060/51743c1c-c0d8-44b5-8b3b-a32f731d16c4)
+![image](https://github.com/hasancolk/vehicle-management-system/assets/70701060/58e4df23-8f16-4f6b-9a87-0ef4645f55ca) <br><br>
